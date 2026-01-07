@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Sirivennela&display=swap');
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+.navigation{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    /* background-color: blue; */
+    top: 0;
+    left: 0;
+    /* z-index: 1000; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    box-sizing: border-box;
+}
+.navigation button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 24px;
+    width: 150px;
+    /* max-width: 150px; */
+    height: auto;
+    border: 2px solid #ccb627;
+    color: #ccb627;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+}
+.picture-page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.title,
+.img-page{
+    flex: 0 0 50%;
+    height: 100%;
+}
+.img-page{
+    max-width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+.img-page img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #2c2c2c;
+}
+.title h2{
+    /* font-size: clamp(200px, 1rem, 1080px); */
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 105px 0;
+    text-transform: uppercase;
+}
+.title h1{
+    font-size: 6rem;
+    font-weight: 800;
+    margin: 0 0 105px 0;
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: "Parisienne", cursive;
+}
+.title h3{
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #c6bf9f;
+}
+.navigation button:hover{
+    background-color: rgba(255, 255, 255, 0.845);
+    /* color: white; */
+}
