@@ -1,0 +1,68 @@
+.welcome{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: auto;
+    background-color: #FAEB92;
+    justify-content: space-between;
+    gap: 50px;
+}
+.official-date{
+    font-weight: 200;
+    font-size: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    text-transform: uppercase;
+    font-family: "Parisienne", cursive;
+}
+.official-time{
+    /* font-family: 10px; */
+    font-family: "Cormorant Garamond", serif;
+    font-size: 58px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.65);
+    letter-spacing: 0.15em;
+}
+.text{
+    font-weight: 200;
+    font-size: 40px;
+}
+.invited{
+    font-weight: 100;
+    font-size: 100px;
+    font-family: "Parisienne", cursive;
+    /* font-family: 'Great Vibes', cursive; */
+}
+.tail-d{
+    position: relative;
+    display: inline-block;
+}
+.tail-d:after{
+    content: "♡";
+    position: absolute;
+    right: -247px;
+    bottom: 11px;
+    font-size: 120px;
+    transform: rotate(20deg);
+}
+.tail-svg{
+  position: absolute;
+  left: 44px;
+  top: 30%;
+  width: 180px;
+  height: 60px;
+}
+.blink{
+    animation: blinks 1s steps(1, start) infinite;
+}
+@keyframes blinks{
+    50% {
+        opacity: 0;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=DM+Serif+Text:ital@0;1&family=Lavishly+Yours&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Sirivennela&display=swap');

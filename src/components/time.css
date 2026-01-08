@@ -1,0 +1,62 @@
+.Time{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    background-color: #FBFBFB;
+    gap: 50px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.message{
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;    font-weight: 100;
+    font-size: 50px;
+    padding: 12px;
+    width: 75%;
+    /* word-wrap: break-word; */
+    text-align: center;
+    /* white-space: normal; */
+    /* overflow-wrap: break-word; */
+}
+.message-see-you{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 50;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.65);
+    letter-spacing: 0.15em;
+}
+.countdown{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 58px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.65);
+    letter-spacing: 0.15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    gap: 80px;
+}
+.countdown div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.countdown-time{
+    font-size: 12px;
+}
+
+
+.blink-slow{
+    animation: blinks 2s steps(1, start) infinite;
+}
+@keyframes blinks-slow{
+    50% {
+        opacity: 0;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Bungee&family=DM+Serif+Text:ital@0;1&family=Lavishly+Yours&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Petit+Formal+Script&family=Sirivennela&display=swap');
