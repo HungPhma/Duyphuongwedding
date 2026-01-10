@@ -6,9 +6,10 @@
     /* justify-content: center; */
     width: 100%;
     height: auto;
-    background-color: #FAEB92;
+    background-color: #EEE6CA;
     justify-content: space-between;
     gap: 50px;
+    box-sizing: border-box;
 }
 .official-date{
     font-weight: 200;

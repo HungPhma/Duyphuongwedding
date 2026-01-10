@@ -50,10 +50,12 @@ function Time() {
                     <div>{timeLeft.hours}</div>
                     <div className='countdown-time'>{timeLeft.hours > 1 ? 'HOURS' : 'HOUR'}</div>
                 </div>
+                {/* <span>:</span> */}
                 <div>
                     <div>{timeLeft.minutes}</div>
                     <div className='countdown-time'>{timeLeft.minutes > 1 ? 'MINUTES' : 'MINUTE'}</div>
                 </div>
+                {/* <span>:</span> */}
                 <div>
                     <div>{timeLeft.seconds}</div>
                     <div className='countdown-time'>{timeLeft.seconds > 1 ? 'SECONDS' : 'SECOND'}</div>
