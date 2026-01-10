@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Duyphuongwedding/static/css/main.c61da474.css",
-    "main.js": "/Duyphuongwedding/static/js/main.acbffc42.js",
+    "main.css": "/Duyphuongwedding/static/css/main.33664e9e.css",
+    "main.js": "/Duyphuongwedding/static/js/main.57e4f0c5.js",
     "static/js/453.0440b50c.chunk.js": "/Duyphuongwedding/static/js/453.0440b50c.chunk.js",
     "static/media/duyphuong2.jpg": "/Duyphuongwedding/static/media/duyphuong2.47cb9254d20012f3644c.jpg",
     "static/media/duyphuong3.jpg": "/Duyphuongwedding/static/media/duyphuong3.3ff70da81b82f2b2a6d8.jpg",
@@ -12,12 +12,12 @@
     "static/media/fin2.jpg": "/Duyphuongwedding/static/media/fin2.d48f559755064ae4c047.jpg",
     "static/media/logo.svg": "/Duyphuongwedding/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Duyphuongwedding/index.html",
-    "main.c61da474.css.map": "/Duyphuongwedding/static/css/main.c61da474.css.map",
-    "main.acbffc42.js.map": "/Duyphuongwedding/static/js/main.acbffc42.js.map",
+    "main.33664e9e.css.map": "/Duyphuongwedding/static/css/main.33664e9e.css.map",
+    "main.57e4f0c5.js.map": "/Duyphuongwedding/static/js/main.57e4f0c5.js.map",
     "453.0440b50c.chunk.js.map": "/Duyphuongwedding/static/js/453.0440b50c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c61da474.css",
-    "static/js/main.acbffc42.js"
+    "static/css/main.33664e9e.css",
+    "static/js/main.57e4f0c5.js"
   ]
 }
