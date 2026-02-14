@@ -14,6 +14,7 @@ function Story() {
         <div className='story-p'>
             <div className='story-p-section1'>
                 <div className='story-p-section1-1'>
+                    <h1> Need to fix this section </h1>
                     <p>
                         Long before Duy and Phuong ever locked eyes, fate was already pulling some serious strings—through our parents, of course! Their friend group was so tight that both sets of parents loved joking about being “in-laws” someday, mostly because Phuong has an older sister. They’d tease endlessly, but let’s be honest: no one actually thought it’d involve the baby of the family and the guy eight years older!
                         When people ask how we met, especially eyeing that not-so-common age gap among our friends, we usually grin and say, “Oh, we weren’t supposed to end up together—it all started with a dramatic love triangle!” (Spoiler: The “triangle” was just parental matchmaking dreams gone wild.)
