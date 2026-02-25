@@ -29,6 +29,8 @@
     flex-direction: column;
     padding: 40px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
     /* gap: 30px; */
 }
 .story-p p {
@@ -97,7 +99,7 @@
     width: 100%;
     /* max-width: 270px; */
     /* max-height: 400px; */
-    height: 380px;
+    height: 400px;
     object-fit: cover;
     display: block;
 }
@@ -133,4 +135,10 @@
 .story-p-section2-2 p{
     padding: 24px;
     font-family: "Funnel Sans", sans-serif;
+}
+.p-end{
+    /* width: 70%; */
+    text-align: center;
+    font-size: 18px;
+    /* background-color: white; */
 }

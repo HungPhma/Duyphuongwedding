@@ -15,16 +15,16 @@ function rsvp() {
           </div>
         </div>
         <div className='content1-2'>
-          <h1>Reply by 22 . 04 . 2026</h1>
+          <h1>Reply by 04 . 22 . 2026</h1>
           <form className='submit-form' >
             <label>
               Name: 
-              <input className="input-name" type='text' name='name' placeholder='Your full name' required/>
+              <input className="input-name" type='text' name='name' required/>
             </label>
 
             <label>
-              Number of Guest(included children):
-              <input className='input-number' type='number' name='people' min="1" max="100" required/>
+              Number of Guest:
+              <input className='input-number' type='number' min="1" max="20" name='people' required/>
             </label>
 
             {/* <fieldset> */}

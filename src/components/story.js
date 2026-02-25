@@ -40,12 +40,16 @@ function Story() {
                     <p>
                         And no story of ours would be complete without mentioning our furry overlord: our cute little boy named Fin! He’s the third wheel who steals the show—demanding cuddles, judging our packing skills before trips, and making our home feel even cozier.
                     </p>
+                    <p>
+                        In the end, our story turned into a real-life fairytale—one with plot twists, laughter, and a whole lot of stubborn love. We got engaged in August 2025, and now, after six and a half years of adventures, we’re thrilled to announce: we’re finally getting married!
+                        Thank you for being part of our happily ever after.
+                    </p>
                 </div>
             </div>
-            <p>
+            {/* <p className='p-end'>
                 In the end, our story turned into a real-life fairytale—one with plot twists, laughter, and a whole lot of stubborn love. We got engaged in August 2025, and now, after six and a half years of adventures, we’re thrilled to announce: we’re finally getting married!
                 Thank you for being part of our happily ever after.
-            </p>
+            </p> */}
         </div>
     </div>
   )
