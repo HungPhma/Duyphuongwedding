@@ -25,10 +25,13 @@ function Story() {
                     <p>Since becoming a couple, we’ve discovered our absolute favorite thing: traveling! We loooove hitting the open road for epic road trips, blasting playlists, and turning every drive into an adventure filled with snacks, silly sing-alongs, and those deep conversations that make the miles fly by.</p>
                 </div>            
                 <div className='couple-pic'>
-                    <img src={pic3} loading='eager' fetchpriority="high" as="image" alt='Duy and Phuong Picture' />
-                    <img src={pic2} loading='eager' fetchpriority="high" as="image" alt='Duy and Phuong Picture' />
-                    <img className='left-pic' src={pic1} loading='eager' fetchpriority="high" as="image" alt='Duy and Phuong Picture' />
-                    <img className='right-pic' src={pic4} loading='eager' fetchpriority="high" as="image" alt='Duy and Phuong Picture' />
+                    <img src={pic3} loading="eager" fetchPriority="high" alt="Duy and Phuong wedding portrait 1" />
+
+                    <img src={pic2} loading="eager" fetchPriority="high" alt="Duy and Phuong wedding portrait 2" />
+
+                    <img className="left-pic" src={pic1} loading="eager" fetchPriority="high" alt="Duy and Phuong smiling together" />
+
+                    <img className="right-pic" src={pic4} loading="eager" fetchPriority="high" alt="Duy and Phuong smiling together at their wedding" />
                 </div>
             </div>
             <div className='story-p-section1 story-p-section2'>
