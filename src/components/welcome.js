@@ -4,8 +4,8 @@ import './welcome.css'
 function Welcome() {
   return (
     <div className='welcome'>
-        <div className='official-date'><span>06</span><span>.</span><span>14</span><span>.</span><span>2026</span></div>
-        <div className='official-time'>5<span className="blink">:</span>00 pm</div>
+        <div className='official-date'><span>05</span><span>.</span><span>31</span><span>.</span><span>2026</span></div>
+        <div className='official-time'>6<span className="blink">:</span>00 pm</div>
         <div className='text'>You are</div>
         <div className="invited">
             Invite

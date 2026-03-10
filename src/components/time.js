@@ -4,7 +4,7 @@ import './time.css'
 function Time() {
 
     const targetDate = useMemo(() => {
-        return new Date('2026-06-14T17:00:00');
+        return new Date('2026-05-31T18:00:00');
     }, []);
 
     const calculateTime = useCallback(() => {

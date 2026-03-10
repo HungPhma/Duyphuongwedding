@@ -2,17 +2,21 @@ import React from 'react'
 import duyphuongimg from '../assets/duyphuong.jpg'
 import './header.css';
 import { useNavigate } from 'react-router-dom';
+
 function Header() {
     const navigate = useNavigate();
+
     const handleClick = () => {
         const storySection = document.getElementById('Story');
-        if(storySection){
-            storySection.scrollIntoView({behavior:'smooth'});
+        if (storySection) {
+            storySection.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
     const handleRsvp = () => {
         navigate('/rsvp');
     };
+
     return (
         <div className='header' id='header'>
             <div className='navigation'>
@@ -21,12 +25,12 @@ function Header() {
             </div>
             <div className='picture-page'>
                 <div className='title'>
-                    <h2>We are getting married</h2>
+                    <h2>We tied the knot — come celebrate with us</h2>
                     <h1>Duy & Phuong</h1>
-                    <h3>BUON ME THUOT, VIETNAM</h3>
+                    <h3>ORANGE HILL, ORANGE COUNTY</h3>
                 </div>
                 <div className='img-page'>
-                    <img src={duyphuongimg} alt="Duy and Phuong wedding" loading='eager' fetchpriority="high" as="image"/>
+                    <img src={duyphuongimg} alt="Duy and Phuong wedding" loading='eager' fetchPriority="high" />
                 </div>
             </div>
         </div>

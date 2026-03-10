@@ -1,4 +1,6 @@
-.Time{
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Cormorant+Garamond:ital,wght@0,100;0,300;0,400&family=Bungee&family=DM+Serif+Text:ital@0;1&family=Lavishly+Yours&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Petit+Formal+Script&family=Sirivennela&display=swap');
+
+.Time {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,58 +8,97 @@
     height: auto;
     background-color: #FBFBFB;
     gap: 50px;
-    /* justify-content: center; */
     align-items: center;
     box-sizing: border-box;
 }
-.message{
-    font-family: "Atkinson Hyperlegible Mono", sans-serif;    font-weight: 100;
-    font-size: 50px;
+
+/* ── Message ── */
+.message {
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    font-weight: 100;
+    font-size: clamp(20px, 4vw, 50px);
     padding: 12px;
     width: 75%;
-    /* word-wrap: break-word; */
     text-align: center;
-    /* white-space: normal; */
-    /* overflow-wrap: break-word; */
 }
-.message-see-you{
+
+/* ── See you in ── */
+.message-see-you {
     font-family: "Cormorant Garamond", serif;
-    font-size: 40px;
+    font-size: clamp(22px, 3.5vw, 40px);
     font-weight: 50;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.65);
     letter-spacing: 0.15em;
 }
-.countdown{
+
+/* ── Countdown ── */
+.countdown {
     font-family: "Cormorant Garamond", serif;
-    font-size: 58px;
+    font-size: clamp(36px, 7vw, 58px);
     font-weight: 100;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.65);
     letter-spacing: 0.15em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 5vw, 80px);
+    flex-wrap: wrap;
 }
-.countdown div{
+
+.countdown div {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
-.countdown-time{
-    font-size: 12px;
+
+.countdown-time {
+    font-size: clamp(9px, 1.2vw, 12px);
+    letter-spacing: 0.1em;
 }
 
-
-.blink-slow{
-    animation: blinks 2s steps(1, start) infinite;
+/* ── Blink ── */
+.blink-slow {
+    animation: blinks-slow 2s steps(1, start) infinite;
 }
-@keyframes blinks-slow{
+
+@keyframes blinks-slow {
     50% {
         opacity: 0;
     }
 }
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Bungee&family=DM+Serif+Text:ital@0;1&family=Lavishly+Yours&family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Petit+Formal+Script&family=Sirivennela&display=swap');
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+    .Time {
+        gap: 36px;
+        padding: 30px 20px;
+    }
+
+    .message {
+        width: 90%;
+    }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+    .Time {
+        gap: 28px;
+        padding: 24px 16px;
+    }
+
+    .message {
+        width: 100%;
+    }
+
+    /* 2x2 grid on very small screens */
+    .countdown {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 40px;
+        width: 100%;
+        justify-items: center;
+    }
+}
