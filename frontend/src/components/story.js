@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import './story.css'
-import pic1 from '../assets/duyphuong2.jpg'
-import pic2 from '../assets/duyphuong3.jpg'
-import pic3 from '../assets/duyphuong4.jpg'
-import pic4 from '../assets/duyphuong5.jpg'
-import fin1 from '../assets/fin.jpg'
-import fin2 from '../assets/fin2.jpg'
+import pic1 from '../assets/duyphuong2.webp'
+import pic2 from '../assets/duyphuong3.webp'
+import pic3 from '../assets/duyphuong4.webp'
+import pic4 from '../assets/duyphuong5.webp'
+import fin1 from '../assets/fin.webp'
+import fin2 from '../assets/fin2.webp'
 
 function Story() {
   const sectionRefs = useRef([]);

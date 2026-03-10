@@ -9,7 +9,7 @@ const VENUE = {
 };
 const TIMELINE = [
   { time: "6:00 PM – 7:00 PM",  label: "Cocktail Hour",             icon: "🥂" },
-  { time: "7:00 PM – 10:00 PM", label: "Let's Celebrate & Have Fun!!", icon: "🎉" },
+  { time: "7:00 PM – 11:00 PM", label: "Let's Celebrate & Have Fun!!", icon: "🎉" },
 ];
 export default function Location() {
   return (

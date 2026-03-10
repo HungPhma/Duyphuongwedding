@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Home from '../src/pages/home.js';
-import Rsvp from '../src/pages/rsvp.js';
+import Home from './pages/home.js';
+import Rsvp from './pages/rsvp.js';
 function App() {
   return (
     <div className="App">

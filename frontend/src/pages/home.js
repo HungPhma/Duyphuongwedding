@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense, lazy} from 'react'
 import Header from '../components/header.js';
 import Welcome from '../components/welcome.js';
-import Time from '../components/time.js';
-import Story from '../components/story.js';
-import Location from '../components/location.js';
-import Thank from '../components/thank.js';
-import './home.css'
+import './home.css';
+
+
+const Time = lazy(() => import('../components/time.js'));
+const Story = lazy(() => import('../components/story.js'));
+const Location = lazy(() => import('../components/location.js'));
+const Thank = lazy(() => import('../components/thank.js'));
 
 const PETAL_EMOJIS = ['🌸','🌺','🌷','✿','❀','🌼'];
 
@@ -27,7 +29,10 @@ export default function Home() {
   const handleOpen = () => {
     if (opening) return;
     setOpening(true);
-    setTimeout(() => setShowLanding(false), 1600);
+    setTimeout(() => {
+        setShowLanding(false);
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 1600);
   };
 
   return (
@@ -88,10 +93,12 @@ export default function Home() {
         <div className='home'>
           <Header />
           <Welcome />
-          <Time />
-          <Story />
-          <Location/>
-          <Thank />
+          <Suspense fallback={null}>
+            <Time />
+            <Story />
+            <Location/>
+            <Thank />
+          </Suspense>
         </div>
       </div>
 

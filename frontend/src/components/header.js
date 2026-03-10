@@ -1,5 +1,5 @@
 import React from 'react'
-import duyphuongimg from '../assets/duyphuong.jpg'
+import duyphuongimg from '../assets/duyphuong.webp'
 import './header.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ function Header() {
                     <h3>ORANGE HILL, ORANGE COUNTY</h3>
                 </div>
                 <div className='img-page'>
-                    <img src={duyphuongimg} alt="Duy and Phuong wedding" loading='eager' fetchPriority="high" />
+                    <img src={duyphuongimg} alt="Duy and Phuong wedding" decoding="sync" loading='eager' fetchPriority="high" />
                 </div>
             </div>
         </div>
