@@ -553,7 +553,7 @@
 
     .form-scroll {
         padding: 10px 24px 0;
-        width: 100%;
+        width: 90%;
     }
 
     .form-footer {
@@ -571,11 +571,12 @@
 
     .meal-options {
         flex-direction: column;
+        width: 100%;
     }
 
     .meal-card {
         flex: none;
-        width: 100%;
+        /* width: 100%; */
         flex-direction: row !important;
         align-items: center !important;
         padding: 12px 14px;
@@ -603,6 +604,9 @@
         top: 10px;
         right: 10px;
     }
+    /* .meal-section{
+        padding: 12px;
+    } */
 }
 
 /* ══════════════════════════════════════
@@ -671,7 +675,7 @@
 
     .meal-card {
         flex: none;
-        width: 100%;
+        /* width: 100%; */
         flex-direction: row !important;
         align-items: center !important;
         padding: 10px 12px;
