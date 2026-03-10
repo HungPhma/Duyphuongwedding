@@ -82,7 +82,7 @@
 }
 
 .title h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
     font-weight: 800;
     margin: 0;
     font-family: "Parisienne", cursive;
@@ -125,7 +125,7 @@
     }
 
     .title h1 {
-        font-size: 5rem;
+        font-size: clamp(1.8rem, 5vw, 4rem);
     }
 }
 
@@ -149,7 +149,7 @@
     }
 
     .title h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .title h2 {
@@ -206,7 +206,7 @@
     }
 
     .title h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .title h2 {

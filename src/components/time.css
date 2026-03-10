@@ -85,6 +85,9 @@
 /* ── Mobile ── */
 @media (max-width: 480px) {
     .Time {
+        height: 400px;
+        display: flex;
+        justify-content: center;
         gap: 28px;
         padding: 24px 16px;
     }
@@ -95,8 +98,8 @@
 
     /* 2x2 grid on very small screens */
     .countdown {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        /* display: grid; */
+        /* grid-template-columns: 1fr 1fr; */
         gap: 24px 40px;
         width: 100%;
         justify-items: center;
