@@ -9,6 +9,10 @@ function Rsvp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!response) {
+      Swal.fire({ icon: 'warning', title: 'Please select your attendance response.' });
+      return;
+    }
     setLoading(true);
     try{
       const resquest = await fetch('https://duyphuongwedding.onrender.com/rsvp', {

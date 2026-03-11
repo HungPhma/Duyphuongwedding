@@ -22,11 +22,13 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization']
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 
 app.get('/', (req,res) => {
+    console.log('CORS origin set to:', process.env.URL_CONNECT);
     res.send('Duyphuongwedding backend running');
 });
 app.get('/awake', (req,res) => {
