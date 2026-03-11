@@ -152,7 +152,7 @@ function Story() {
         </p>
         <div className="story-text closing-text">
           <p>
-            We got engaged in August 2025, and now, after six and a half years of adventures, we're thrilled to announce: we're finally getting married! Thank you for being part of our happily ever after.
+            We got engaged in August 2025, and after six and a half years of adventures, we're thrilled to announce — we finally got married and celebrated with a beautiful wedding in Vietnam in March 2026!
           </p>
         </div>
         <p className="closing-date">Duy &amp; Phuong — August 2025 💍</p>

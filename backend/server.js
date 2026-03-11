@@ -29,8 +29,12 @@ app.use(express.json());
 app.get('/', (req,res) => {
     res.send('Duyphuongwedding backend running');
 });
+app.get('/awake', (req,res) => {
+    console.log("Sending status back to frontend!");
+    res.status(200).json({message: "Render wakes up!"});
+})
 app.post('/rsvp', async (req,res) => {
-    const { name, guestCount, attending, mealChoice } = req.body;
+    const { name, guestCount, attending } = req.body;
 
     // validate form
     if(!name || typeof name !== 'string' || name.trim() === ''){
@@ -45,16 +49,14 @@ app.post('/rsvp', async (req,res) => {
         return res.status(400).json({error: 'Attendance response is required.'});
     }
 
-    const validMeals = ['Beef', 'Chicken', 'Vegetarian'];
+    // const validMeals = ['Beef', 'Chicken', 'Vegetarian'];
 
-    if(attending && (!mealChoice || !validMeals.includes(mealChoice))){
-        return res.status(400).json({ error: 'Please select a valid meal: chicken, beef, or vegetarian.' });
-    }
+    // if(attending && (!mealChoice || !validMeals.includes(mealChoice))){
+    //     return res.status(400).json({ error: 'Please select a valid meal: chicken, beef, or vegetarian.' });
+    // }
 
     // send email
-    const attendingHTML = attending 
-        ? `<p><b>Meal Choice:</b> ${mealChoice.charAt(0).toUpperCase() + mealChoice.slice(1)}</p>`
-        : '';
+    const attendingHTML = `<p>They will be joining the celebration! 🎊</p>`;
     const notAttendingHTML = `<p>Though they cannot attend, they will be celebrating from afar! 🎉</p>`;
 
     const emailHTML = `
@@ -81,7 +83,7 @@ app.post('/rsvp', async (req,res) => {
 
     try{
         await sendEmailWithRetry({
-            from: "Duyphuongwedding.com",
+            from: `${process.env.APP_NAME} <${process.env.EMAIL_USER}>`,
             to: "Hpham23.official@gmail.com",
             subject: "Duyphuongwedding Respond From Guest",
             html: emailHTML
@@ -93,8 +95,8 @@ app.post('/rsvp', async (req,res) => {
     }
     // respond back
     const message = attending ? 
-                    `Thank You, ${name}! We're so excited to celebrate with you and your ${guestCount} guest(s). See you soon! 💍`:
-                    `Thank You, ${name}! We'll miss you, but we're grateful you'll be celebrating with us in spirit. 💕`;
+                    `Thank You, ${name}!<br> We're so excited to celebrate with you and your ${guestCount} ${guestCount > 1 ? 'guests' : 'guest'}.<br> See you soon!`:
+                    `Thank You, ${name}!<br> We'll miss you, but we're grateful you'll be celebrating with us in spirit. 💕`;
     
     return res.status(200).json({message});
 });

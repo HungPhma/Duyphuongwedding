@@ -1,8 +1,49 @@
 import React, { useState } from 'react'
 import './rsvp.css'
+import Swal from 'sweetalert2'
 
 function Rsvp() {
   const [response, setResponse] = useState('');
+  const [form, setForm] = useState({name: '', numGuest: ''});
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try{
+      const resquest = await fetch('https://duyphuongwedding.onrender.com/rsvp', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: form.name,
+          guestCount: Number(form.numGuest),
+          attending: response === 'accept'
+        })
+      });
+
+      const data = await resquest.json();
+      if(!resquest.ok) throw new Error(data.error);
+      Swal.fire({
+        icon: 'success',
+        title: 'Thank You!',
+        html: data.message,
+        confirmButtonColor: '#b07d62'
+      });
+      setForm({name: '', numGuest: ''});
+      setResponse('');
+    }
+    catch(err){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        html: err.message,
+        confirmButtonColor: '#b07d62'
+      });
+    }
+    finally{
+      setLoading(false);
+    }
+  };
 
   return (
     <div className='rsvp'>
@@ -19,73 +60,35 @@ function Rsvp() {
         <div className='content1-2'>
           <h1>Reply by 05 . 15 . 2026</h1>
           <div className='form-scroll'>
-            <form className='submit-form'>
+            <form className='submit-form' onSubmit={handleSubmit}>
               <label>
                 Name:
-                <input className="input-name" type='text' name='name' required />
+                <input className="input-name" type='text' name='name' value={form.name} onChange={(e) => setForm({...form, name: e.target.value})} required />
               </label>
 
               <label>
                 Number of Guest:
-                <input className='input-number' type='number' min="1" max="20" name='people' required />
+                <input className='input-number' type='number' value={form.numGuest} min="1" max="20" name='people' onChange={(e) => setForm({...form, numGuest: e.target.value})} required />
               </label>
 
               <label>
-                <input
-                  className='radio'
-                  type='radio'
-                  name="response"
-                  value="accept"
-                  onChange={(e) => setResponse(e.target.value)}
-                />
+                <input className='radio' type='radio' name="response" value="accept"
+                  onChange={(e) => setResponse(e.target.value)} />
                 Accept with pleasure
               </label>
 
               <label>
-                <input
-                  className='radio'
-                  type='radio'
-                  name='response'
-                  value="deny"
-                  onChange={(e) => setResponse(e.target.value)}
-                />
+                <input className='radio' type='radio' name='response' value="deny"
+                  onChange={(e) => setResponse(e.target.value)} />
                 Will celebrate from afar
               </label>
 
-              {/* ── Meal selection — only shown when accepted ── */}
-              {response === 'accept' && (
-                <div className='meal-section'>
-                  <p className='meal-title'>🎉 Now the fun part — pick your feast!</p>
-                  <div className='meal-options'>
-
-                    <label className='meal-card'>
-                      <input className='radio meal-radio' type='radio' name='meal' value='beef' />
-                      <div className='meal-icon'>🥩</div>
-                      <div className='meal-name'>The Classic</div>
-                      <div className='meal-desc'>Juicy grilled beef tenderloin — for the one who likes to keep it deliciously simple</div>
-                    </label>
-
-                    <label className='meal-card'>
-                      <input className='radio meal-radio' type='radio' name='meal' value='fish' />
-                      <div className='meal-icon'>🐟</div>
-                      <div className='meal-name'>The Catch</div>
-                      <div className='meal-desc'>Pan-seared fish with lemon butter — light, bright & ready to celebrate</div>
-                    </label>
-
-                    <label className='meal-card'>
-                      <input className='radio meal-radio' type='radio' name='meal' value='vegetarian' />
-                      <div className='meal-icon'>🌿</div>
-                      <div className='meal-name'>The Garden</div>
-                      <div className='meal-desc'>Stuffed portobello with roasted veggies — proof that plants know how to party too</div>
-                    </label>
-
-                  </div>
-                </div>
-              )}
+              <div className='form-footer'>
+                <button type='submit' disabled={loading}>
+                  <span>{loading ? 'Sending...' : 'Send'}</span>
+                </button>
+              </div>
             </form>
-          </div>
-          <div className='form-footer'>
-            <button><span>Send</span></button>
           </div>
         </div>
       </div>

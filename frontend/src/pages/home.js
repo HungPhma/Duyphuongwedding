@@ -1,7 +1,8 @@
-import React, { useState, Suspense, lazy} from 'react'
+import React, { useState, Suspense, lazy, useEffect} from 'react'
 import Header from '../components/header.js';
 import Welcome from '../components/welcome.js';
 import './home.css';
+// import { data } from 'react-router-dom';
 
 
 const Time = lazy(() => import('../components/time.js'));
@@ -25,7 +26,7 @@ const petals = Array.from({ length: 28 }, (_, i) => ({
 export default function Home() {
   const [showLanding, setShowLanding] = useState(true);
   const [opening, setOpening] = useState(false);
-
+  const [status, setStatus] = useState(false);
   const handleOpen = () => {
     if (opening) return;
     setOpening(true);
@@ -34,6 +35,30 @@ export default function Home() {
         window.scrollTo({ top: 0, behavior: 'instant' });
     }, 1600);
   };
+  useEffect(() => {
+    let cancelled = false;
+    const fetchStatus = async () => {
+        const BASE_DELAY = 3000;
+        const MAX_RETRIES = 20;
+        for(let attempt = 0; attempt < MAX_RETRIES; attempt++){
+          if(cancelled) return;
+          try{
+          const data = await fetch('https://duyphuongwedding.onrender.com/awake');
+            if(!data.ok){
+              throw new Error("Cannot wake up backend");
+            }
+            if(!cancelled) setStatus(true);
+            return;
+          }
+          catch(err){
+            const delay = Math.min(BASE_DELAY * 2 ** attempt, 15000);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+    };
+    fetchStatus();
+    return () => {cancelled = true;};
+  }, []);
 
   return (
     <div>
