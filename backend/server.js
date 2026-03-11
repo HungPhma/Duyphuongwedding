@@ -103,7 +103,7 @@ app.post('/rsvp', async (req,res) => {
     return res.status(200).json({message});
 });
 
-const CURRENT_PORT = process.env.PORT || 8000;
+const CURRENT_PORT = process.env.PORT;
 
 app.listen(CURRENT_PORT, () => {
     console.log('Server running on port ' + CURRENT_PORT);
