@@ -45,7 +45,7 @@ function Time() {
     return (
         <div className='Time'>
             <div className='message'>
-                We’re so happy to have you here, sharing in the love and joy of our wedding day.
+                We’re so happy to have you here, sharing in the love and joy of our post-wedding celebration.
             </div>
 
             <div className='message-see-you'>See You In</div>
