@@ -48,7 +48,7 @@ app.post('/rsvp', async (req,res) => {
     try {
         await resend.emails.send({
             from: 'DuyPhuong Wedding <wedding@duyphuongwedding.com>',
-            to: 'Hpham23.official@gmail.com',
+            to: ['phuongdhoang11@gmail.com', 'quocduyp11@gmail.com'],
             subject: 'Duyphuongwedding Respond From Guest',
             html: emailHTML
         });
@@ -58,7 +58,7 @@ app.post('/rsvp', async (req,res) => {
     }
 
     const message = attending
-        ? `Thank You, ${name}!<br> We're so excited to celebrate with you and your ${guestCount} ${guestCount > 1 ? 'guests' : 'guest'}.<br> See you soon!`
+        ? `Thank You, ${name}!<br> We're so excited to celebrate with you.<br> See you soon!`
         : `Thank You, ${name}!<br> We'll miss you, but we're grateful you'll be celebrating with us in spirit. 💕`;
 
     return res.status(200).json({message});
