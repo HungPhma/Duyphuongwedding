@@ -272,11 +272,11 @@
 /* ═══ HINT TEXT ═══ */
 .hint {
   margin-top: 28px;
-  font-size: 11px;
-  font-weight: 200;
+  font-size: 14px;
+  font-weight: 400;
   letter-spacing: 0.45em;
   text-transform: uppercase;
-  color: #3A0519;
+  color: #ffffff;
   z-index: 2;
   animation: breathe 3s ease-in-out infinite;
 }
