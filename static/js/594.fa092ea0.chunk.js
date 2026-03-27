@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkduyphuongwedding=globalThis.webpackChunkduyphuongwedding||[]).push([[594],{594(n,s,e){e.r(s),e.d(s,{default:()=>h});e(43);var u=e(874),d=e(579);const h=function(){const n=(0,u.Zp)();return(0,d.jsxs)("div",{className:"thank",children:[(0,d.jsx)("h1",{className:"thank-you",children:'"Your presence would mean the world to us"'}),(0,d.jsx)("button",{onClick:()=>{n("/rsvp")},children:"Rsvp"})]})}}}]);
+//# sourceMappingURL=594.fa092ea0.chunk.js.map
