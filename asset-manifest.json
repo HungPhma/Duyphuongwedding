@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.dcfd3945.css",
+    "main.css": "/static/css/main.b99804f5.css",
     "main.js": "/static/js/main.86a24d80.js",
     "static/css/685.8fc3685e.chunk.css": "/static/css/685.8fc3685e.chunk.css",
     "static/js/685.50f073be.chunk.js": "/static/js/685.50f073be.chunk.js",
@@ -30,7 +30,7 @@
     "static/media/Duyphuongwedding11.webp": "/static/media/Duyphuongwedding11.d6d87e3fe82581b6230b.webp",
     "static/media/fin2.webp": "/static/media/fin2.c9195e1c74ca8644ffd8.webp",
     "index.html": "/index.html",
-    "main.dcfd3945.css.map": "/static/css/main.dcfd3945.css.map",
+    "main.b99804f5.css.map": "/static/css/main.b99804f5.css.map",
     "main.86a24d80.js.map": "/static/js/main.86a24d80.js.map",
     "685.8fc3685e.chunk.css.map": "/static/css/685.8fc3685e.chunk.css.map",
     "685.50f073be.chunk.js.map": "/static/js/685.50f073be.chunk.js.map",
@@ -43,7 +43,7 @@
     "453.96a61b48.chunk.js.map": "/static/js/453.96a61b48.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcfd3945.css",
+    "static/css/main.b99804f5.css",
     "static/js/main.86a24d80.js"
   ]
 }
