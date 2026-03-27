@@ -323,6 +323,12 @@
     .navigation button {
         pointer-events: auto; /* but keep nav buttons clickable */
     }
+    .carousel-control.prev{
+        left: 10px;
+    }
+    .carousel-control.next{
+        right: 10px;
+    }
 }
 
 
