@@ -10,15 +10,15 @@ const Story = lazy(() => import('../components/story.jsx'));
 const Location = lazy(() => import('../components/location.jsx'));
 const Thank = lazy(() => import('../components/thank.jsx'));
 
-const PETAL_EMOJIS = ['🌸','🌺','🌷','✿','❀','🌼'];
+const PETAL_EMOJIS = ['💍','💒','👰','🤵','💕','🥂','🕊️','💐','🌹','✨','🌸','🌷','💮','🫧','🤍','💫'];
 
-const petals = Array.from({ length: 28 }, (_, i) => ({
+const petals = Array.from({ length: 35}, (_, i) => ({
   id: i,
   left:  `${Math.random() * 105 - 2}%`,
   size:  10 + Math.random() * 14,
   emoji: PETAL_EMOJIS[Math.floor(Math.random() * PETAL_EMOJIS.length)],
-  dur:   `${7 + Math.random() * 9}s`,
-  delay: `${Math.random() * 12}s`,
+  dur:   `${5 + Math.random() * 7}s`,
+  delay: `${Math.random() * 6}s`,
   sway:  `${(Math.random() - 0.5) * 120}px`,
   op:    0.3 + Math.random() * 0.45,
 }));
