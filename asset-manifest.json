@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfad287b.css",
-    "main.js": "/static/js/main.86a24d80.js",
+    "main.css": "/static/css/main.43c05d8b.css",
+    "main.js": "/static/js/main.bdb9f5dd.js",
     "static/css/685.8fc3685e.chunk.css": "/static/css/685.8fc3685e.chunk.css",
     "static/js/685.50f073be.chunk.js": "/static/js/685.50f073be.chunk.js",
     "static/css/420.5946286a.chunk.css": "/static/css/420.5946286a.chunk.css",
@@ -30,8 +30,8 @@
     "static/media/Duyphuongwedding11.webp": "/static/media/Duyphuongwedding11.d6d87e3fe82581b6230b.webp",
     "static/media/fin2.webp": "/static/media/fin2.c9195e1c74ca8644ffd8.webp",
     "index.html": "/index.html",
-    "main.dfad287b.css.map": "/static/css/main.dfad287b.css.map",
-    "main.86a24d80.js.map": "/static/js/main.86a24d80.js.map",
+    "main.43c05d8b.css.map": "/static/css/main.43c05d8b.css.map",
+    "main.bdb9f5dd.js.map": "/static/js/main.bdb9f5dd.js.map",
     "685.8fc3685e.chunk.css.map": "/static/css/685.8fc3685e.chunk.css.map",
     "685.50f073be.chunk.js.map": "/static/js/685.50f073be.chunk.js.map",
     "420.5946286a.chunk.css.map": "/static/css/420.5946286a.chunk.css.map",
@@ -43,7 +43,7 @@
     "453.96a61b48.chunk.js.map": "/static/js/453.96a61b48.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfad287b.css",
-    "static/js/main.86a24d80.js"
+    "static/css/main.43c05d8b.css",
+    "static/js/main.bdb9f5dd.js"
   ]
 }
