@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkduyphuongwedding=globalThis.webpackChunkduyphuongwedding||[]).push([[788],{788(s,e,c){c.r(e),c.d(e,{default:()=>n});c(43);var d=c(579);const n=function(){return(0,d.jsxs)("div",{className:"dresscode",children:[(0,d.jsx)("h2",{children:"Dresscode"}),(0,d.jsxs)("div",{className:"dresscode-content",children:[(0,d.jsx)("p",{className:"attire",children:"Cocktail Attire"}),(0,d.jsx)("p",{className:"colors",children:"Enjoy any colors you love"})]})]})}}}]);
+//# sourceMappingURL=788.79dcd0ef.chunk.js.map
